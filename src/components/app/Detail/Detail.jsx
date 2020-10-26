@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 const Character = ({ name, race, gender, wikiUrl }) => (
   <>
-    <p>{name}</p>
-    <p>{race}</p>
-    <p>{gender}</p>
-    <p>{wikiUrl}</p>
+    <section data-testid="character">
+      <p>{name}</p>
+      <p>{race}</p>
+      <p>{gender}</p>
+      <p>{wikiUrl}</p>
+    </section>
   </>
 );
 
