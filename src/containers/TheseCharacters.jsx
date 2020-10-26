@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import CharacterList from '../components/app/List/List';
 import { getApi } from '../services/api';
 
