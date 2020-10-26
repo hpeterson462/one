@@ -15,5 +15,5 @@ export const getApiById = (characterId) => {
     }
   })
     .then(res => res.json())
-    .then(json => json.docs)
+    .then(json => json.docs);
 };
