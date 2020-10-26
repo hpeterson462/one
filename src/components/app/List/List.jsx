@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Character from './Character';
 
 const CharacterList = ({ characters }) => {
   const characterElements = characters.map(character => (
     <li key={`${character._id}`}>
-      <Character {...character} />
+      <span>{character.name}</span>
     </li>
   ));
 
@@ -17,10 +16,10 @@ const CharacterList = ({ characters }) => {
 };
 
 CharacterList.propTypes = {
-  character: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    race: PropTypes.string.isRequired,
-    gender: PropTypes.string.isRequired,
-    wikiUrl: PropTypes.string.isRequired
-  }))
-}
+  characters: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+  })).isRequired
+};
+
+export default CharacterList;

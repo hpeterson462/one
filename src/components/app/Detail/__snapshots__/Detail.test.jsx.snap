@@ -2,9 +2,17 @@
 
 exports[`Detail component renders Detail 1`] = `
 <DocumentFragment>
-  <p />
-  <p />
-  <p />
-  <p />
+  <p>
+    Spot
+  </p>
+  <p>
+    dog
+  </p>
+  <p>
+    female
+  </p>
+  <p>
+    www.wikidog.com
+  </p>
 </DocumentFragment>
 `;
