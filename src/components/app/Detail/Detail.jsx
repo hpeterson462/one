@@ -14,7 +14,7 @@ Character.propTypes = {
   name: PropTypes.string.isRequired,
   race: PropTypes.string.isRequired,
   gender: PropTypes.string.isRequired,
-  wikiUrl: PropTypes.string.isRequired,
+  wikiUrl: PropTypes.string.isRequired
 };
 
 export default Character;
