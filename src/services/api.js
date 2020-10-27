@@ -4,7 +4,7 @@ export const getApi = () => {
       'Authorization': 'Bearer pvHkTVdmM4UBgOO_K0ag'
     }
   })
-    .then(res = res.json())
+    .then(res => res.json())
     .then(json => json.docs);
 };
 
