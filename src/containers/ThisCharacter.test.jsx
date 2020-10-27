@@ -16,7 +16,9 @@ describe('ThisCharacter container', () => {
         wikiUrl: 'www.dogwiki.com'
       }
     ]);
-    render(<ThisCharacter />);
+    render(<ThisCharacter match={{
+      params: { characterId: '1' }
+    }} />);
 
     const character = await screen.findByTestId('character');
     return waitFor(() => {
