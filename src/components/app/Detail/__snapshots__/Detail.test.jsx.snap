@@ -6,7 +6,7 @@ exports[`Detail component renders Detail 1`] = `
     data-testid="character"
   >
     <p>
-      Spot
+      NameSpot
     </p>
     <p>
       dog
