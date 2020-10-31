@@ -5,11 +5,15 @@ exports[`List component renders List 1`] = `
   <ul
     data-testid="characters"
   >
-    <li>
-      <span>
-        Spot
-      </span>
-    </li>
+    <a
+      href="/details/1"
+    >
+      <li>
+        <span>
+          Spot
+        </span>
+      </li>
+    </a>
   </ul>
 </DocumentFragment>
 `;
