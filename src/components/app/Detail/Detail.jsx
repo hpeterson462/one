@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Character = ({ character }) => {
-  console.log(character, 'hhheeellloo');
   return (
     <section data-testid="character">
       <p>{character.name}</p>
