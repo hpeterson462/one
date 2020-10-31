@@ -1,22 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Character = ({ name, race, gender, wikiUrl }) => (
-  <>
+const Character = ({ character }) => {
+  console.log(character, 'hhheeellloo');
+  return (
     <section data-testid="character">
-      <p>Name{name}</p>
-      <p>{race}</p>
-      <p>{gender}</p>
-      <p>{wikiUrl}</p>
+      <p>{character.name}</p>
+      <p>{character.race}</p>
+      <p>{character.gender}</p>
+      <p>{character.wikiUrl}</p>
     </section>
-  </>
-);
+  );
+};
 
 Character.propTypes = {
-  name: PropTypes.string.isRequired,
-  race: PropTypes.string.isRequired,
-  gender: PropTypes.string.isRequired,
-  wikiUrl: PropTypes.string.isRequired
+  character: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    race: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+    wikiUrl: PropTypes.string.isRequired,
+  }).isRequired
 };
 
 export default Character;

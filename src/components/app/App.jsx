@@ -12,7 +12,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={TheseCharacters} />
-        <Route exact path="/detail/:id" component={ThisCharacter} />
+        <Route exact path="/details/:id" component={ThisCharacter} />
       </Switch>
     </Router>
   );

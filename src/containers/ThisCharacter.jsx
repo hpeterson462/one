@@ -4,11 +4,15 @@ import Character from '../components/app/Detail/Detail';
 import { getApiById } from '../services/api';
 
 const ThisCharacter = ({ match }) => {
-  const [character, setCharacter] = useState([]);
+  const [character, setCharacter] = useState({
+    name: '',
+    race: '',
+    gender: '',
+    wikiUrl: ''
+  });
 
   useEffect(() => {
-    const characterId = match.params.characterId;
-    getApiById(characterId)
+    getApiById(match.params.id)
       .then(character => setCharacter(character)
       )
   }, []);
@@ -16,8 +20,9 @@ const ThisCharacter = ({ match }) => {
   console.log(character);
 
   return (
-    <Character name={character.name} race={character.race} gender={character.gender} wikiUrl={character.wikiUrl}
-    />
+    <div>
+      <Character character={character} />
+    </div>
   )
 };
 
