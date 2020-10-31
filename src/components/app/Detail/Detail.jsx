@@ -12,13 +12,14 @@ const Character = ({ character }) => {
   );
 };
 
-Character.propTypes = {
-  character: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    race: PropTypes.string.isRequired,
-    gender: PropTypes.string.isRequired,
-    wikiUrl: PropTypes.string.isRequired,
-  }).isRequired
-};
+// Character.propTypes = {
+//   character: PropTypes.array().isRequired
+// }
+// // name: PropTypes.string.isRequired,
+// // race: PropTypes.string.isRequired,
+// // gender: PropTypes.string.isRequired,
+// // wikiUrl: PropTypes.string.isRequired,
+// // ).isRequired
+// // };
 
 export default Character;
