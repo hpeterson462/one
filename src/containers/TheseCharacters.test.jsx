@@ -2,6 +2,7 @@ import React from 'react';
 import { findByTestId, render, screen, waitFor } from '@testing-library/react';
 import TheseCharacters from './TheseCharacters';
 import { getApi } from '../services/api';
+import { MemoryRouter } from 'react-router-dom';
 
 jest.mock('../services/api.js');
 
@@ -23,7 +24,7 @@ describe('TheseCharacters container', () => {
         wikiUrl: 'www.dogwikitoo.com'
       }
     ]);
-    render(<TheseCharacters />);
+    render(<MemoryRouter><TheseCharacters /></MemoryRouter>);
 
     const characterList = await screen.findByTestId('characters');
     return waitFor(() => {
