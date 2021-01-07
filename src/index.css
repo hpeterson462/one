@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  $color1: #cfb997;
+  $color2: #46697e;
+  $color3: #f9f1f1;
+  $color4: #a9c3ac;
+}

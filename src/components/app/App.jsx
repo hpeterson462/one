@@ -1,5 +1,19 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import TheseCharacters from '../../containers/TheseCharacters';
+import ThisCharacter from '../../containers/ThisCharacter';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={TheseCharacters} />
+        <Route exact path="/details/:id" component={ThisCharacter} />
+      </Switch>
+    </Router>
+  );
 }

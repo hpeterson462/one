@@ -1,0 +1,19 @@
+body {
+  $color1: #cfb997;
+  $color2: #46697e;
+  $color3: #f9f1f1;
+  $color4: #644f47;
+  $color5: #657567;
+
+  background-color: $color5;
+}
+
+ul {
+  text-decoration: none;
+  li {
+    color: $color1;
+  }
+  li:hover {
+    color: $color4;
+  }
+}
