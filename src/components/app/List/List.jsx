@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './List.css';
 
 const CharacterList = ({ characters }) => {
   const characterElements = characters.map(character => (
