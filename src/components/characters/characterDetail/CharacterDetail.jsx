@@ -12,10 +12,15 @@ const CharacterDetail = () => {
   return (
     <>
       <section data-testid="character">
-        <p>{character.name}</p>
-        <p>{character.race}</p>
-        <p>{character.gender}</p>
-        <p>{character.wikiUrl}</p>
+        <h1>{character.name}</h1>
+        <h3>{character.race}</h3>
+        <h3>{character.gender}</h3>
+        <a
+          className="ext-link"
+          target="_blank"
+          href={character.wikiUrl}>
+          <h4>{character.wikiUrl}</h4>
+        </a>
       </section>
       <button onClick={() => window.history.back('/list')}>
         Back
