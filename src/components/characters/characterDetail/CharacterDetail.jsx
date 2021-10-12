@@ -18,7 +18,7 @@ const CharacterDetail = () => {
         <p>{character.gender}</p>
         <p>{character.wikiUrl}</p>
       </section>
-      <button onClick={() => window.history.back('/')}>
+      <button onClick={() => window.history.back('/list')}>
         Back
       </button>
     </>
