@@ -4,15 +4,15 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import TheseCharacters from '../../containers/TheseCharacters';
-import ThisCharacter from '../../containers/ThisCharacter';
+import ListPage from '../pages/listPage/ListPage';
+import DetailPage from '../pages/detailPage/DetailPage';
 
 export default function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={TheseCharacters} />
-        <Route exact path="/details/:id" component={ThisCharacter} />
+        <Route exact path="/" component={ListPage} />
+        <Route exact path="/details/:id" component={DetailPage} />
       </Switch>
     </Router>
   );
