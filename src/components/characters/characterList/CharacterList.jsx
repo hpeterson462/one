@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useCharacters } from '../../../hooks/characters';
 import { Link } from 'react-router-dom';
-import styles from './List.css';
+import styles from './CharacterList.css';
 
-const CharacterList = ({ characters }) => {
+const CharacterList = () => {
+  const { loading, characters } = useCharacters();
+
+  if (loading) return <h1>Loading...</h1>;
+
   const characterElements = characters.map(character => (
     <Link to={`/details/${character._id}`} key={`${character._id}`}>
       <li key={`${character._id}`}>
