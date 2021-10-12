@@ -25,14 +25,13 @@ const CharacterDetail = () => {
   );
 };
 
-// Character.propTypes = {
-//   character: PropTypes.array().isRequired
-// }
-// // name: PropTypes.string.isRequired,
-// // race: PropTypes.string.isRequired,
-// // gender: PropTypes.string.isRequired,
-// // wikiUrl: PropTypes.string.isRequired,
-// // ).isRequired
-// // };
+CharacterDetail.propTypes = {
+  characters: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    race: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+    wikiUrl: PropTypes.string.isRequired,
+  })).isRequired
+};
 
 export default CharacterDetail;
