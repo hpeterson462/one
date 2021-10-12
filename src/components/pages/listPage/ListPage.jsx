@@ -6,5 +6,5 @@ export default function ListPage() {
     <div>
       <CharacterList />
     </div>
-  )
-}
+  );
+};

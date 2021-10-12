@@ -6,5 +6,5 @@ export default function DetailPage() {
     <div>
       <CharacterDetail />
     </div>
-  )
-}
+  );
+};

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router';
 import { useParams } from 'react-router-dom';
 import { useCharacterById } from '../../../hooks/characters';
 import PropTypes from 'prop-types';

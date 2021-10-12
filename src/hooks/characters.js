@@ -28,8 +28,6 @@ export const useCharacterById = id => {
       .finally(() => setLoading(false));
   }, [id]);
 
-  console.log(character);
-
   return {
     loading,
     character
