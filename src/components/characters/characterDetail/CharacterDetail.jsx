@@ -27,9 +27,16 @@ const CharacterDetail = () => {
                 lothlorien
                 : greatEastRoad
               )
-            )
-          }
-          alt=""
+            )}
+          alt={character.race === 'Hobbit' ?
+            'The Shire'
+            : (character.race === 'Dwarf' ?
+              'The Iron Hills'
+              : (character.race === 'Elf' ?
+                'Lothlorien'
+                : 'The Great East Road'
+              )
+            )}
         />
 
         <h1>{character.name}</h1>
