@@ -7,12 +7,13 @@ import clouds from '../../../assets/clouds.png';
 import eaglesEyrie from '../../../assets/eaglesEyrie.png';
 import arda from '../../../assets/arda.png';
 import ettenmoors from '../../../assets/ettenmoors.png';
-import mordor from '../../../assets/mordor.png';
 import shire from '../../../assets/shire.png';
 import ironHills from '../../../assets/ironHills.png';
+import greatEastRoad from '../../../assets/greatEastRoad.png';
 import lothlorien from '../../../assets/lothlorien.png';
 import forest from '../../../assets/forest.png';
-import greatEastRoad from '../../../assets/greatEastRoad.png';
+import mordor from '../../../assets/mordor.png';
+import CharacterImg from '../characterImg/CharacterImg';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -22,67 +23,8 @@ const CharacterDetail = () => {
 
   return (
     <>
-      <img
-        style={{ width: '25%' }}
-        src={
-          character.race === 'Men,Wraith' ?
-            landOfShadow
-            : character.race === 'Great Eagles' ?
-              eaglesEyrie
-              : character.race === 'Stone-trolls' ?
-                ettenmoors
-                : character.race === 'Ainur' ?
-                  arda
-                  : character.race === 'Maiar' ?
-                    clouds
-                    : character.race === 'Hobbit' ?
-                      shire
-                      : character.race === 'Human' ?
-                        greatEastRoad
-                        : character.race === 'Men' ?
-                          greatEastRoad
-                          : character.race === 'Dwarf' ?
-                            ironHills
-                            : character.race === 'Dwarves' ?
-                              ironHills
-                              : character.race === 'Elf' ?
-                                lothlorien
-                                : character.race === 'Elves' ?
-                                  lothlorien
-                                  : character.race === 'NaN' ?
-                                    forest
-                                    : mordor
-        }
-        alt={
-          character.race === 'Men,Wraith' ?
-            'The Land of Shadow'
-            : character.race === 'Great Eagles' ?
-              'Eagles Eyrie'
-              : character.race === 'Stone-trolls' ?
-                'Ettenmoors'
-                : character.race === 'Ainur' ?
-                  'Arda'
-                  : character.race === 'Maiar' ?
-                    'Light filled clouds'
-                    : character.race === 'Hobbit' ?
-                      'The Shire'
-                      : character.race === 'Human' ?
-                        'The Great East Road'
-                        : character.race === 'Men' ?
-                          'The Great East Road'
-                          : character.race === 'Dwarf' ?
-                            'Iron Hills'
-                            : character.race === 'Dwarves' ?
-                              'Iron Hills'
-                              : character.race === 'Elf' ?
-                                'Lothlorien'
-                                : character.race === 'Elves' ?
-                                  'Lothlorien'
-                                  : character.race === 'NaN' ?
-                                    'Forest'
-                                    : 'Mordor'
-        }
-      />
+      <CharacterImg />
+
       <section data-testid='character'>
         <h1>{character.name}</h1>
         <h3>{character.race}</h3>
