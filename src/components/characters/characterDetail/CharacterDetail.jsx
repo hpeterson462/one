@@ -2,10 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useCharacterById } from '../../../hooks/characters';
 import PropTypes from 'prop-types';
-import shire from '../../../assets/shire.png';
-import ironHills from '../../../assets/ironHills.png';
-import lothlorien from '../../../assets/lothlorien.png';
-import greatEastRoad from '../../../assets/greatEastRoad.png';
+import CharacterImg from '../characterImg/CharacterImg';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -15,30 +12,9 @@ const CharacterDetail = () => {
 
   return (
     <>
-      <section data-testid="character">
+      <CharacterImg />
 
-        <img
-          style={{ width: '25%' }}
-          src={character.race === 'Hobbit' ?
-            shire
-            : (character.race === 'Dwarf' ?
-              ironHills
-              : (character.race === 'Elf' ?
-                lothlorien
-                : greatEastRoad
-              )
-            )}
-          alt={character.race === 'Hobbit' ?
-            'The Shire'
-            : (character.race === 'Dwarf' ?
-              'The Iron Hills'
-              : (character.race === 'Elf' ?
-                'Lothlorien'
-                : 'The Great East Road'
-              )
-            )}
-        />
-
+      <section data-testid='character'>
         <h1>{character.name}</h1>
         <h3>{character.race}</h3>
         <h3>{character.gender}</h3>

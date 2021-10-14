@@ -6,14 +6,16 @@ import { MemoryRouter } from 'react-router-dom';
 describe('CharacterDetail component', () => {
   afterEach(() => cleanup());
   it('renders character details', () => {
-    const { asFragment } = render(<MemoryRouter>
-      <DetailPage
-        characters={[{
-          id: '5cd99d4bde30eff6ebccfbbe',
-          name: 'Adanel'
-        }]}
-      />
-    </MemoryRouter>);
+    const { asFragment } = render(
+      <MemoryRouter>
+        <DetailPage
+          characters={[{
+            id: '5cd99d4bde30eff6ebccfbbe',
+            name: 'Adanel'
+          }]}
+        />
+      </MemoryRouter>
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });
