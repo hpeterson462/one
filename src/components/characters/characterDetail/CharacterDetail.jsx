@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { FaRing } from 'react-icons/fa';
 import { useCharacterById } from '../../../hooks/characters';
 import PropTypes from 'prop-types';
 import CharacterImg from '../characterImg/CharacterImg';
@@ -19,10 +20,11 @@ const CharacterDetail = () => {
         <h3>{character.race}</h3>
         <h3>{character.gender}</h3>
         <a
-          className="ext-link"
-          target="_blank"
+          className='ext-link'
+          target='_blank'
+          title='More info'
           href={character.wikiUrl}>
-          <h4>{character.wikiUrl}</h4>
+          <FaRing size={24} />
         </a>
       </section>
       <button onClick={() => window.history.back('/list')}>
