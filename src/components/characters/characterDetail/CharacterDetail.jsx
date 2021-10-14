@@ -2,17 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useCharacterById } from '../../../hooks/characters';
 import PropTypes from 'prop-types';
-import landOfShadow from '../../../assets/landOfShadow.png';
-import clouds from '../../../assets/clouds.png';
-import eaglesEyrie from '../../../assets/eaglesEyrie.png';
-import arda from '../../../assets/arda.png';
-import ettenmoors from '../../../assets/ettenmoors.png';
-import shire from '../../../assets/shire.png';
-import ironHills from '../../../assets/ironHills.png';
-import greatEastRoad from '../../../assets/greatEastRoad.png';
-import lothlorien from '../../../assets/lothlorien.png';
-import forest from '../../../assets/forest.png';
-import mordor from '../../../assets/mordor.png';
 import CharacterImg from '../characterImg/CharacterImg';
 
 const CharacterDetail = () => {
